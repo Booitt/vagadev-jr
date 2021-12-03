@@ -1,0 +1,79 @@
+.backdrop {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(8, 65, 84, 0.62);
+}
+
+.modal {
+    position: fixed;
+    z-index: 201;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50rem;
+    width: 40rem;
+    background-color: #fff;
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr;
+}
+
+.closeButton {
+    justify-self: flex-end;
+    margin: 1.6rem;
+    cursor: pointer;
+}
+
+.closeButton svg {
+    margin: 0;
+}
+
+.text {
+    display: grid;
+    grid-template-columns: 6rem 1fr 6rem;
+    align-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.text div {
+    height: 1px;
+    background-color: #084154;
+}
+
+.text h4 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.superMario {
+    justify-self: center;
+    align-self: flex-end;
+
+    transform: scale(3.5);
+    margin-bottom: 9.3rem;
+}
+
+/* ----------------------------------------------------- */
+/* ------------------- MEDIA QUERIES ------------------- */
+/* ----------------------------------------------------- */
+
+/* 1088px */
+@media (max-width: 68em) {
+    .superMario {
+        transform: scale(3.3);
+    }
+}
+
+/* 832px */
+@media (max-width: 52em) {
+    .superMario {
+        transform: scale(2.97);
+    }
+}

@@ -1,0 +1,51 @@
+.footer {
+    display: flex;
+    height: 5rem;
+    width: 100%;
+}
+
+.logoContainer {
+    flex: 2;
+    background-color: #084154;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logoContainer img {
+    margin-right: 4.8rem;
+}
+
+.rightsContainer {
+    flex: 5;
+    background-color: #3EC6E0;
+    display: flex;
+    align-items: center;
+}
+
+.rightsContainer p {
+    margin-left: 4.8rem;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+/* ----------------------------------------------------- */
+/* ------------------- MEDIA QUERIES ------------------- */
+/* ----------------------------------------------------- */
+
+/* 375px (mesmo da img mobile) */
+@media (max-width: 375px) {
+    .logoContainer {
+        flex: 0;
+        min-width: fit-content;
+    }
+
+    .logoContainer img, .rightsContainer p {
+        margin: 0 1.6rem;
+    }
+
+    .rightsContainer {
+        flex: 1;
+    }
+}

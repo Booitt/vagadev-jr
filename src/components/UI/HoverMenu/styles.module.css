@@ -1,0 +1,122 @@
+.container {
+    position: absolute;
+    left: -75%;
+    top: 200%;
+    width: fit-content;
+    height: 25rem;
+    background-color: #084154;
+    border-radius: 5px;
+
+    border: 2px solid #3EC6E0;
+    box-shadow: 8px 8px 0 0 #3EC6E0;
+}
+
+.triangle {
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: 2%;
+    height: 5rem;
+    width: 5rem;
+    transform: rotate(45deg);
+    background-color: #3EC6E0;
+}
+
+.content {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 20rem);
+    align-content: center;
+    justify-items: center;
+
+    font-size: 1.6rem;
+}
+
+.content ul {
+    list-style: none;
+}
+
+.content ul li {
+    padding: 1rem 1.6rem;
+    margin: .5rem;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.content ul li:not(:first-child):hover {
+    background-color: #3EC6E0;
+}
+
+.content ul li:first-child {
+    cursor: auto;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ----------------------------------------------------- */
+/* ------------------- MEDIA QUERIES ------------------- */
+/* ----------------------------------------------------- */
+
+/* 1088px */
+@media (max-width: 68em) {
+    .triangle {
+        display: none;
+    }
+
+    .container {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+        min-height: 100vh;
+        height: fit-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .content {
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        justify-content: center;
+        gap: 6.4rem;
+    }
+
+    .content ul li:first-child {
+        font-size: 2rem;
+    }
+
+    .content ul li {
+        font-size: 1.8rem;
+    }
+}
+
+/* 544px */
+@media (max-width: 34em) {
+    .content {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        margin: 0 1.6rem;
+    }
+
+    .content ul:not(:last-child) {
+        border-bottom: 1px solid #062C38;
+    }
+
+    .content ul li:first-child {
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+}
